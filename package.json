@@ -8,7 +8,7 @@
     "node": ">=22.19.0"
   },
   "scripts": {
-    "start": "pi --extension ./extensions/learning.ts --tools read,bash,edit,write,codemode,tool_search",
+    "start": "pi --extension ./extensions/learning.ts",
     "lessons": "tsx scripts/lessons.ts",
     "check": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",

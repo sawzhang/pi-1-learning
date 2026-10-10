@@ -41,8 +41,9 @@ npm start
 | 源码阅读与进阶方向 | [源码地图](docs/04-source-map.md) |
 | 学习记录模板 | [学习日志](docs/05-journal.md) |
 | 官方文档与版本依据 | [资料来源](docs/sources.md) |
+| DeepSeek 配置与真实验证 | [DeepSeek 实验](docs/06-deepseek.md) |
 
-扩展 `extensions/learning.ts` 提供 `/learn` 命令和 `learning_lesson` 延迟工具。数据来自 `src/lessons.ts`，同时供终端目录使用。它只读取内置课程，不写磁盘，不调用模型。`examples/lesson-summary.js` 是运行在 Pi Codemode 中的脚本，需要 Pi 提供的 `tools` 与 `text`。
+扩展 `extensions/learning.ts` 提供 `/learn` 命令和 `learning_lesson` 延迟工具。数据来自 `src/lessons.ts`，同时供终端目录使用。它只读取内置课程，不写磁盘，不调用模型。`.pi/settings.json` 增量启用 Codemode 和工具搜索，默认保留只读工具。`examples/lesson-summary.js` 是运行在 Pi Codemode 中的脚本，需要 Pi 提供的 `tools` 与 `text`。
 
 ## 验证边界
 

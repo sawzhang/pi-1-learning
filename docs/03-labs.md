@@ -24,7 +24,7 @@ npm exec -- pi --extension ./extensions/learning.ts --tools read --print "读取
 npm exec -- pi --extension ./extensions/learning.ts --tools read --mode json "读取 src/lessons.ts，列出课程标题" > artifacts/events.jsonl
 ```
 
-`--tools` 替换本次工具选择。主启动命令同时启用 `codemode` 与 `tool_search`；官方说明见 [CLI 文档](https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/docs/cli.md)。实验输出默认被 Git 忽略。
+`--tools` 是本次工具白名单，也会排除未列出的延迟工具。主启动命令通过 `.pi/settings.json` 的 `defaultTools` 增量启用 `codemode` 与 `tool_search`，保留 `read`，关闭 `bash`、`edit`、`write`；这保留了延迟工具的可发现性。项目设置需要通过 Pi 的项目信任检查。官方说明见 [CLI 文档](https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/docs/cli.md)。实验输出默认被 Git 忽略。
 
 ## 验证与局限
 
