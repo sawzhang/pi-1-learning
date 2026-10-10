@@ -1,0 +1,28 @@
+{
+  "name": "pi-1-learning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "中文 Pi 1.0 学习笔记与可运行扩展实验",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "start": "pi --extension ./extensions/learning.ts --tools read,bash,edit,write,codemode,tool_search",
+    "lessons": "tsx scripts/lessons.ts",
+    "check": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "verify": "npm run check && npm test",
+    "pi:version": "pi --offline --version"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "1.0.0",
+    "typebox": "1.3.27"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}
